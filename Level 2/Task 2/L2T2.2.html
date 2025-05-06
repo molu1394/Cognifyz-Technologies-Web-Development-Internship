@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hamburger Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background: #0093E9;
+      background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      padding: 15px 20px;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #80D0C7;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+      }
+
+      .nav-links a {
+        padding: 15px 0;
+      }
+
+      .menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <span class="logo">CodeWithMe</span>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" style="color:red;">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+</html>

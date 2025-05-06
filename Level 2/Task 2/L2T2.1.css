@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+}
+
+.navcontainer {
+    width: 100%;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+}
+
+#navlist {
+    width: 100%;
+    list-style: none;
+    font-size: 2rem;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo {
+    font-size: 2.5rem;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#sign {
+    color: red;
+}
+
+.navitem {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.main {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+.profilecard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.profilecard::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height:36%;
+    width:100%;
+    border-radius:24px 24px 0 0;
+    background-color: #4070f4;
+
+}
+.myimg{
+    position: relative;
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    background-color: blue;
+    padding:3px;
+    margin-bottom: 10px;
+}
+.img1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:3px solid white
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+}
+.job{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+.media{
+    display: flex;
+    align-content: center;
+    margin-top: 15px;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size:18px;
+    height: 34px;
+    width:34px;
+    margin:0 8px;
+    border-radius: 50%;
+    background-color: blue;
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.b1{
+    color:#fff;
+    font-size:14px;
+    font-weight: 400;
+    border:none;
+    border-radius:24px;
+    margin:0 10px;
+    padding:8px 24px;
+    background-color: blue;
+    cursor: pointer;
+    transition:all 0.3s ease-in;
+}
+.b1:hover{
+    background-color:#4771e7;
+}
+.ana{
+    display: flex;
+    align-items: center;
+    margin-top:25px;
+}
+.data{
+    display: flex;
+    align-items: center;
+    color:#333;
+    padding:0 20px;
+    border-right: 2px  solid #e7e7e7;
+}
+.data i{
+    font-size: 10px;
+    margin-right:6px;
+}
+.data:last-child{
+    border-right:none
+}
+
+
+.footer {
+    height: 100%;
+    width: 100%;
+}
+.fcontainer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.389);
+    padding: 20px;
+}
+
+#footeritem {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.quick,.contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+p {
+    color: aqua;
+}
+
+  /* Responsive Design Media Queries */
+@media (max-width: 768px) {
+    #navlist {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.5rem;
+    }
+
+    .navitem {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #logo {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #footeritem {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .fcontainer {
+      padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+      font-size: 1.5rem;
+    }
+
+    #navlist {
+      font-size: 1.2rem;
+    }
+
+    #footeritem {
+      font-size: 1.2rem;
+    }
+}

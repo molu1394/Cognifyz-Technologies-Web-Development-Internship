@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="gallery">
+
+    <input type="radio" name="gallery" id="img1" checked>
+    <input type="radio" name="gallery" id="img2">
+    <input type="radio" name="gallery" id="img3">
+    <input type="radio" name="gallery" id="img4">
+
+    <div class="thumbnails">
+      <label for="img1" style="background-image: url('Asset/1.webp');"></label>
+      <label for="img2" style="background-image: url('Asset/2.jpeg');"></label>
+      <label for="img3" style="background-image: url('Asset/3.jpg');"></label>
+      <label for="img4" style="background-image: url('Asset/4.webp');"></label>
+    </div>
+
+    <div class="preview-container preview"></div>
+  </div>
+</body>
+</html>
